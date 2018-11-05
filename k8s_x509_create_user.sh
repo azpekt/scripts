@@ -42,4 +42,5 @@ kubectl config set-context $USERNAME --cluster=kubernetes-the-hard-way --namespa
 
 echo "..creating rolebinging..."
 kubectl create rolebinding rb-admin-$USERNAME --clusterrole=admin --user=$USERNAME --namespace=$NS
+# kubectl create clusterrolebinding rb-admin-$USERNAME --clusterrole=cluster-admin --user=$USERNAME 
 kubectl config use-context $USERNAME
